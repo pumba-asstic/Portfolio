@@ -1,0 +1,241 @@
+body {
+    font-family:'Roboto Mono', monospace;
+    background-color: #1a1a1a;
+    color: #e0e0e0; /* Light grey text */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400; /* Lighter font weight for a sleek look */
+    color: #f0f0f0; /* Slightly brighter text for headings */
+    margin-bottom: 10px;
+  }
+  a {
+    color: #64b5f6; /* Light blue link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #90caf9; /* Brighter blue on hover */
+  }
+  
+  /* --- Container Styles --- */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* --- Button Styles --- */
+  .button {
+    background-color: #333; /* Darker grey button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button:hover {
+    background-color: #555; /* Slightly lighter on hover */
+    transform: translateY(-2px); /* Subtle lift on hover */
+  }
+  
+  .button.primary {
+    background-color: #00bcd4; /* Cyan primary button */
+  }
+  
+  .button.primary:hover {
+    background-color: #4dd0e1; /* Brighter cyan on hover */
+  }
+  
+ 
+
+  
+  /* --- Card Styles (for content blocks) --- */
+  .card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* --- Highlight/Accent Colors --- */
+  .highlight-cyan {
+    color: #00bcd4; /* Cyan highlight */
+  }
+  
+  .highlight-magenta {
+    color: #e91e63; /* Magenta highlight */
+  }
+  
+  .highlight-green {
+    color: #4caf50; /* Green highlight */
+  }
+  
+  /* --- Subtle Glow Effects --- */
+  .glow-cyan {
+    text-shadow: 0 0 10px #00bcd4;
+  }
+  
+  .glow-magenta {
+    text-shadow: 0 0 10px #e91e63;
+  }
+  
+  /* --- Divider --- */
+  hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 20px 0;
+  }
+  
+  /* --- Code Block Styling --- */
+  pre, code {
+    background-color: #282c34; /* Darker background for code */
+    color: #abb2bf; /* Lighter text for code */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Fira Code', monospace; /* Monospace font for code */
+    overflow-x: auto;
+  }
+  
+  pre {
+    white-space: pre-wrap;
+  }
+  /* --- Carousel Styles --- */
+.carousel-container {
+    width: 80%; /* Adjust as needed */
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; /* Hide slides that are not visible */
+    position: relative; /* For positioning buttons */
+  }
+  
+  .carousel-track {
+    display: flex; /* Arrange slides horizontally */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding */
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%; /* Each slide takes up 100% width */
+    min-width: 100%; /* Ensure slides don't shrink */
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .slide-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    margin-top: -50px;
+    position: relative;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are on top */
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+  
+  .carousel-nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .carousel-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel-dot.active {
+    background-color: #333;
+  }
+
+  /* --- Responsive Adjustments --- */
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 768px) {
+    body {
+      padding: 10px; /* Reduce padding on mobile */
+    }
+  
+    .container {
+      padding: 0 10px; /* Reduce container padding on mobile */
+    }
+  
+    h1 {
+      font-size: 1.8em; /* Reduce heading size on mobile */
+    }
+  
+    h2 {
+      font-size: 1.5em; /* Reduce heading size on mobile */
+    }
+  
+    .button {
+      display: block; /* Make buttons full-width on mobile */
+      width: 100%;
+      margin-bottom: 10px; /* Add space between buttons */
+    }
+  
+    .card {
+      padding: 15px; /* Reduce card padding on mobile */
+    }
+    .carousel-container {
+        width: 95%; /* Make carousel wider on mobile */
+      }
+    
+      .carousel-slide {
+        padding: 10px; /* Reduce slide padding on mobile */
+      }
+  }
+  
+  /* Media query for even smaller screens (e.g., very small phones) */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5em; /* Further reduce heading size */
+    }
+  
+    h2 {
+      font-size: 1.3em; /* Further reduce heading size */
+    }
+    body {
+      font-size: 0.9em; /* Reduce font size on very small screens */
+    }
+}
